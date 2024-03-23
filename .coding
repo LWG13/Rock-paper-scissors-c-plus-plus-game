@@ -1,0 +1,417 @@
+include <iostream>
+using namespace std;
+
+const int ROCK = 1;
+const int PAPER = 2;
+const int SCISSORS = 3;
+int userChoice = 0;
+
+int getComputerChoice() {
+
+    srand (time(NULL));
+
+    int compChoice = rand() % 3+1;
+    return compChoice;
+}
+int getComputerChoice2() {
+
+    srand (time(NULL));
+
+    int compChoice2 = rand() % 3+1;
+    return compChoice2;
+}
+int getComputerChoice3() {
+
+    srand (time(NULL));
+
+    int compChoice3 = rand() % 3+1;
+    return compChoice3;
+}
+int getComputerChoice4() {
+
+    srand (time(NULL));
+
+    int compChoice4 = rand() % 3+1;
+    return compChoice4;
+}
+
+
+void determineWinner(int userChoice, int compChoice) {
+
+    if (userChoice == ROCK && compChoice == PAPER) {
+
+        cout << "Computer win! Paper wraps rock" << endl;
+    }
+    else if (userChoice == PAPER && compChoice == SCISSORS) {
+
+        cout << "Computer win! Scissors cut paper" << endl;
+
+    }
+
+    else if (userChoice == SCISSORS && compChoice == ROCK) {
+        cout << "Computer win! Rock smahes scissors" << endl;
+    }
+
+    else if (userChoice == ROCK && compChoice == SCISSORS) {
+
+        cout << "YOU win! Rock smashes scissors" << endl;
+
+    }
+
+    else if (userChoice == PAPER && compChoice == ROCK) {
+
+        cout<<"Paper wraps rock" << endl;
+        cout <<"you win!"<<endl;
+    }
+    else if (userChoice == SCISSORS && compChoice == PAPER) {
+
+        cout<<" Scissors cut paper" << endl;
+        cout << "YOU win!"<<endl;
+    }
+
+    else {
+
+        cout << "Tie" << endl;
+    }
+}
+void determineWinner2(int userChoice, int compChoice2) {
+
+    if (userChoice == ROCK && compChoice2 == PAPER) {
+
+        cout << "Computer win! Paper wraps rock" << endl;
+    }
+    else if (userChoice == PAPER && compChoice2 == SCISSORS) {
+
+        cout << "Computer win! Scissors cut paper" << endl;
+
+    }
+
+    else if (userChoice == SCISSORS && compChoice2 == ROCK) {
+        cout << "Computer win! Rock smahes scissors" << endl;
+    }
+
+    else if (userChoice == ROCK && compChoice2 == SCISSORS) {
+
+        cout << "YOU win! Rock smashes scissors" << endl;
+
+    }
+
+    else if (userChoice == PAPER && compChoice2 == ROCK) {
+
+        cout<<"Paper wraps rock" << endl;
+        cout <<"you win!"<<endl;
+    }
+    else if (userChoice == SCISSORS && compChoice2 == PAPER) {
+
+        cout<<" Scissors cut paper" << endl;
+        cout << "YOU win!"<<endl;
+    }
+
+    else {
+
+        cout << "Tie" << endl;
+    }
+}
+
+void determineWinner3(int userChoice, int compChoice3) {
+
+    if (userChoice == ROCK && compChoice3 == PAPER) {
+
+        cout << "Computer win! Paper wraps rock" << endl;
+    }
+    else if (userChoice == PAPER && compChoice3 == SCISSORS) {
+
+        cout << "Computer win! Scissors cut paper" << endl;
+
+    }
+
+    else if (userChoice == SCISSORS && compChoice3 == ROCK) {
+        cout << "Computer win! Rock smahes scissors" << endl;
+    }
+
+    else if (userChoice == ROCK && compChoice3 == SCISSORS) {
+
+        cout << "YOU win! Rock smashes scissors" << endl;
+
+    }
+
+    else if (userChoice == PAPER && compChoice3 == ROCK) {
+
+        cout<<"Paper wraps rock" << endl;
+        cout <<"you win!"<<endl;
+    }
+    else if (userChoice == SCISSORS && compChoice3 == PAPER) {
+
+        cout<<" Scissors cut paper" << endl;
+        cout << "YOU win!"<<endl;
+    }
+
+    else {
+
+        cout << "Tie" << endl;
+    }
+}
+
+void determineWinner4(int userChoice, int compChoice4) {
+
+    if (userChoice == ROCK && compChoice4 == PAPER) {
+
+        cout << "Computer win! Paper wraps rock" << endl;
+    }
+    else if (userChoice == PAPER && compChoice4 == SCISSORS) {
+
+        cout << "Computer win! Scissors cut paper" << endl;
+
+    }
+
+    else if (userChoice == SCISSORS && compChoice4 == ROCK) {
+        cout << "Computer win! Rock smahes scissors" << endl;
+    }
+
+    else if (userChoice == ROCK && compChoice4 == SCISSORS) {
+
+        cout << "YOU win! Rock smashes scissors" << endl;
+
+    }
+
+    else if (userChoice == PAPER && compChoice4 == ROCK) {
+
+        cout<<"Paper wraps rock" << endl;
+        cout <<"you win!"<<endl;
+    }
+    else if (userChoice == SCISSORS && compChoice4 == PAPER) {
+
+        cout<<" Scissors cut paper" << endl;
+        cout << "YOU win!"<<endl;
+    }
+
+    else {
+
+        cout << "Tie" << endl;
+    }
+    
+}
+
+void displayChoice(int userChoice) {
+
+    string result;
+
+    if ( userChoice ==ROCK) {
+        result = "Rock";
+        cout<<result<<endl;
+    }
+
+    else if (userChoice ==PAPER) {
+        result = "Paper";
+        cout<<result<<endl;
+    }
+
+    else if (userChoice ==SCISSORS) {
+        result = "Scissors";
+        cout<<result<<endl;
+    }
+}
+
+int main() {
+
+    intro:
+
+    cout<<" round 1 "<<endl;
+
+    cout << "Game Menu" << endl;
+
+    cout << "1. Rock" << endl;
+
+    cout << "2. Paper" << endl;
+
+    cout << "3. Scissors" << endl;
+
+    cout << "Enter your choice: " <<endl;
+
+    cin >> userChoice;
+
+    cout << "You selected:"<<endl;
+
+    displayChoice(userChoice);
+
+    int compChoice = getComputerChoice();
+
+    cout << "The computer selected: "<<endl;
+
+    displayChoice(compChoice);
+
+    determineWinner (userChoice, compChoice);
+
+    cout<<"|||||||||||||||||||||||||||||||||"<<endl;
+
+    cout<<" round 2 "<<endl;
+
+    cout << "Game Menu" << endl;
+
+    cout << "1. Rock" << endl;
+
+    cout << "2. Paper" << endl;
+
+    cout << "3. Scissors" << endl;
+
+    cout << "Enter your choice: " <<endl;
+
+    cin >> userChoice;
+
+    cout << "You selected:"<<endl;
+
+    displayChoice(userChoice);
+    
+    int compChoice2 = getComputerChoice2();
+
+    cout << "The computer selected: "<<endl;
+
+    displayChoice(compChoice2);
+
+    determineWinner (userChoice, compChoice2);
+
+    cout<<"|||||||||||||||||||||||||||||||||"<<endl;
+
+    cout<<" round 3 "<<endl;
+
+    cout << "Game Menu" << endl;
+
+    cout << "1. Rock" << endl;
+
+    cout << "2. Paper" << endl;
+
+    cout << "3. Scissors" << endl;
+
+    cout << "Enter your choice: " <<endl;
+
+    cin >> userChoice;
+
+    cout << "You selected:"<<endl;
+
+    displayChoice(userChoice);
+    
+    int compChoice3 = getComputerChoice3();
+
+    cout << "The computer selected: "<<endl;
+
+    displayChoice(compChoice3);
+
+    determineWinner (userChoice, compChoice3);
+
+    cout<<"|||||||||||||||||||||||||||||||||"<<endl;
+
+    cout<<" round 4 "<<endl;
+
+    cout << "Game Menu" << endl;
+
+    cout << "1. Rock" << endl;
+
+    cout << "2. Paper" << endl;
+
+    cout << "3. Scissors" << endl;
+
+    cout << "Enter your choice: " <<endl;
+
+    cin >> userChoice;
+
+    cout << "You selected:"<<endl;
+
+    displayChoice(userChoice);
+    
+    int compChoice4 = getComputerChoice4();
+
+    cout << "The computer selected: "<<endl;
+
+    displayChoice(compChoice4);
+
+    determineWinner (userChoice, compChoice4);
+
+    cout<<"|||||||||||||||||||||||||||||||||"<<endl;
+
+    cout<<"how many times you win computer?"<<endl;
+    
+    cout<<"how many times you tie computer?"<<endl;
+    
+    cout<<"how many time you loss?"<<endl;
+    
+    cout<<"|||||||||||||||||||||||||||"<<endl;
+    
+    int wontime;
+    int tietime;
+    int losstime;
+
+    cout<<"amount of win: "<<endl;
+    cin>>wontime;
+    
+    cout<<"amount of tie: "<<endl;
+    cin>>tietime;
+    
+    cout<<"amount of loss: "<<endl;
+    cin>>losstime; 
+    
+    if(wontime > 4 || wontime < 0 || tietime > 4 || tietime < 0 || losstime >4 || losstime <0 ) {
+
+        cout<<" you only can type 0 to 5"<<endl;
+        cout<<"try again!"<<endl;
+
+    }
+    
+    else if(wontime == 0 && tietime  == 0 && losstime == 4){
+      cout<<"you loss"<<endl;
+    }   
+    else if(wontime == 0 && tietime == 1&& losstime == 3){
+      cout<<"you loss"<<endl;
+    }
+    else if(wontime == 0 && tietime == 2&& losstime == 2){
+      cout<<"you loss"<<endl;
+    }
+    else if(wontime == 0 && tietime == 3 && losstime == 1){
+      cout<<"you loss"<<endl;
+    }
+    else if(wontime == 0 && tietime == 4&& losstime == 0){
+      cout<<"tie"<<endl;
+    }
+    else if(wontime == 4 && tietime == 0&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 3 && tietime == 1&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 2 && tietime == 2&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 1 && tietime == 3&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 3 && tietime == 0&& losstime == 1){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 2 &&tietime == 0&&losstime == 2){
+      cout<<"tie"<<endl;
+    }
+    else if(wontime == 1 && tietime == 0&& losstime == 3){
+      cout<<"you loss"<<endl;
+    }
+    else if(wontime == 2 && tietime == 1&& losstime == 1){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 1 && tietime == 1&& losstime == 2){
+      cout<<"you loss"<<endl;
+    }
+    else if(wontime == 0 && tietime == 1&& losstime == 3){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 2 && tietime == 2&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 1 && tietime == 2&&losstime == 1){
+      cout<<"tie"<<endl;
+    }
+    else if(wontime == 1 && tietime == 3&& losstime == 0){
+      cout<<"you win"<<endl;
+    }
+    else if(wontime == 3 && tietime == 0&& losstime == 1){
+      cout<<"you win"<<endl;
+    }
+ return 0;
+}
